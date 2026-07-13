@@ -6,8 +6,8 @@
   "threads": 200,
   "test_times": 2,
   "sources": [
-    "https://ipdb.030101.xyz/bestcfv4/",
-    "https://ipdb.030101.xyz/bestcfv6/",
+    "https://ipdb.api.030101.xyz/?type=cfv4;proxy",
+    "https://ipdb.api.030101.xyz/?type=bestproxy&country=true",
     "https://stock.hostmonit.com/CloudFlareYes"
   ]
 }
