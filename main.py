@@ -13,11 +13,18 @@ PORT=cfg["port"]
 
 def get_ips():
     ips=set()
+    # 添加请求头以模拟真实浏览器访问，防止被目标网站拦截
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
     for url in cfg["sources"]:
         try:
-            txt=requests.get(url,timeout=10).text
-            ips.update(re.findall(r"(?:\d{1,3}\.){3}\d{1,3}|(?:[0-9a-fA-F]*:[0-9a-fA-F:]+)",txt))
-        except:
+            # 在请求中传入 headers 参数
+            response = requests.get(url, timeout=10, headers=headers)
+            txt = response.text
+            ips.update(re.findall(r"(?:\d{1,3}\.){3}\d{1,3}|(?:[0-9a-fA-F]*:[0-9a-fA-F:]+)", txt))
+        except Exception as e:
+            print(f"Error fetching {url}: {e}")
             pass
     return list(ips)
 
