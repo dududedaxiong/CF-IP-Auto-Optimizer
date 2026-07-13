@@ -8,6 +8,6 @@
   "sources": [
     "https://ipdb.api.030101.xyz/?type=cfv4;proxy",
     "https://ipdb.api.030101.xyz/?type=bestproxy&country=true",
-    "https://stock.hostmonit.com/CloudFlareYes"
+    "https://ipdb.api.030101.xyz/?type=cfv6"
   ]
 }
