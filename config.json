@@ -1,0 +1,13 @@
+{
+  "port": 8443,
+  "top": 10,
+  "country": "🇭🇰中国香港",
+  "timeout": 3,
+  "threads": 200,
+  "test_times": 2,
+  "sources": [
+    "https://ipdb.030101.xyz/bestcfv4/",
+    "https://ipdb.030101.xyz/bestcfv6/",
+    "https://stock.hostmonit.com/CloudFlareYes"
+  ]
+}
